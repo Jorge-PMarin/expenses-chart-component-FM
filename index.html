@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <main class="expenses">
+      <section class="expenses__top">
+        <div>
+          <h1 class="expenses__top__heading">My balance</h1>
+          <p class="expenses__top__balance">$921.48</p>
+        </div>
+
+        <img
+          src="./images/logo.svg"
+          alt="Logo: two circles partially overlapping"
+          class="expenses__top__logo"
+        />
+      </section>
+      <section class="expenses__body">
+        <div class="expenses__stats">
+          <div class="expenses__stats__heading">Spending - Last 7 days</div>
+          <div class="expenses__stats__chart">
+            <div class="expenses__item">
+              <div class="expenses__item__bar"></div>
+              <div class="expenses__item__day">mon</div>
+            </div>
+
+            <div class="expenses__item">
+              <div class="expenses__item__bar"></div>
+              <div class="expenses__item__day">tue</div>
+            </div>
+
+            <div class="expenses__item">
+              <div class="expenses__item__bar"></div>
+              <div class="expenses__item__day">wed</div>
+            </div>
+
+            <div class="expenses__item">
+              <div class="expenses__item__bar"></div>
+              <div class="expenses__item__day">thu</div>
+            </div>
+
+            <div class="expenses__item">
+              <div class="expenses__item__bar"></div>
+              <div class="expenses__item__day">fri</div>
+            </div>
+
+            <div class="expenses__item">
+              <div class="expenses__item__bar"></div>
+              <div class="expenses__item__day">sat</div>
+            </div>
+
+            <div class="expenses__item">
+              <div class="expenses__item__bar"></div>
+              <div class="expenses__item__day">sun</div>
+            </div>
+          </div>
+        </div>
+        <div class="expenses__bottom">
+          <div class="expenses__left">
+            <h2 class="expenses__left__text">Total this month</h2>
+            <p class="expenses__left__total">$478.33</p>
+          </div>
+
+          <div class="expenses__right">
+            <p class="expenses__right__difference">+2.4%</p>
+            <h2 class="expenses__right__text">from last month</h2>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+@use './variables';
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$cream;
+}
+
+.expenses {
+  width: 92%;
+  max-width: 42rem;
+
+  &__top {
+    background-color: variables.$soft-red;
+    border-radius: 1.2rem;
+    color: variables.$very-pale-orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+
+    &__heading {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    &__balance {
+      font-weight: 700;
+      font-size: 2.4rem;
+    }
+
+    &__logo {
+      display: block;
+      max-width: 100%;
+      width: 5.5rem;
+    }
+  }
+
+  &__body {
+    padding: 2rem;
+    background-color: variables.$very-pale-orange;
+    border-radius: 1.2rem;
+  }
+
+  &__stats {
+    &__heading {
+      color: variables.$dark-brown;
+      font-weight: 700;
+      font-size: 2.3rem;
+    }
+
+    &__chart {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      height: 24rem;
+      border-bottom: 0.1rem solid hsla(28, 10%, 53%, 0.205);
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    width: 11%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+    &__bar {
+      height: 70%;
+      // width: 3.3rem;
+      width: 100%;
+      background-color: variables.$soft-red;
+      margin-bottom: 1.4rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+    }
+
+    &__day {
+      font-size: 1.2rem;
+      color: variables.$medium-brown;
+    }
+  }
+
+  &__bottom {
+    padding: 2.5rem 0rem 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    &__text {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: variables.$medium-brown;
+      margin-bottom: 1rem;
+    }
+
+    &__total {
+      font-weight: 700;
+      font-size: 2.8rem;
+    }
+  }
+
+  &__right {
+    align-self: end;
+    text-align: end;
+
+    &__text {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: variables.$medium-brown;
+    }
+
+    &__difference {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: variables.$dark-brown;
+    }
+  }
+}
