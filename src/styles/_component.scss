@@ -1,4 +1,4 @@
-@use './variables';
+@use "./variables";
 
 body {
   min-height: 100vh;
@@ -58,19 +58,25 @@ body {
       justify-content: space-between;
       align-items: end;
       height: 22rem;
-      border-bottom: 0.1rem solid hsla(28, 10%, 53%, 0.205);
-      padding: 2.5rem 0rem;
     }
   }
 
   &__item {
-    height: 90%;
+    height: 78%;
     width: 11%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     position: relative;
+
+    &__container {
+      display: flex;
+      flex-direction: column-reverse;
+      height: 88%;
+      width: 100%;
+      position: relative;
+    }
 
     &__label {
       background-color: variables.$dark-brown;
@@ -82,37 +88,43 @@ body {
       font-weight: 700;
       letter-spacing: 0.1rem;
       position: absolute;
+      left: 0;
+      transform: translate(-18%, 0);
+      display: none;
+      z-index: 1;
+    }
+
+    &__label--active {
+      display: block;
     }
 
     &__bar {
       height: 100%;
       width: 100%;
       background-color: variables.$soft-red;
-      margin-bottom: 1.4rem;
       border-radius: 0.4rem;
       cursor: pointer;
     }
 
     &__bar:hover {
-      background-color: lighten(variables.$soft-red, 8%);
+      opacity: 0.7;
     }
 
     &__bar--today {
       background-color: variables.$cyan;
     }
 
-    &__bar--today:hover {
-      background-color: lighten(variables.$cyan, 8%);
-    }
-
     &__day {
       font-size: 1.2rem;
       color: variables.$medium-brown;
+      margin-top: 1.5rem;
     }
   }
 
   &__bottom {
     padding: 2.5rem 0rem 0.5rem 0;
+    border-top: 0.1rem solid hsla(28, 10%, 53%, 0.205);
+    margin-top: 2.5rem;
     display: flex;
     justify-content: space-between;
   }
@@ -147,5 +159,11 @@ body {
       margin-bottom: 0.4rem;
       color: variables.$dark-brown;
     }
+  }
+}
+
+@media (min-width: 435px) {
+  .expenses__item__label {
+    transform: translate(-13%, 0);
   }
 }
