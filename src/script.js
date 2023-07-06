@@ -1,6 +1,38 @@
 const expenseLabels = document.querySelectorAll(".expenses__item__label");
 const expenseBars = document.querySelectorAll(".expenses__item__bar");
 
+//data
+const data = [
+  {
+    day: "mon",
+    amount: 17.45,
+  },
+  {
+    day: "tue",
+    amount: 34.91,
+  },
+  {
+    day: "wed",
+    amount: 52.36,
+  },
+  {
+    day: "thu",
+    amount: 31.07,
+  },
+  {
+    day: "fri",
+    amount: 23.39,
+  },
+  {
+    day: "sat",
+    amount: 43.28,
+  },
+  {
+    day: "sun",
+    amount: 25.48,
+  },
+];
+
 function calculate(data) {
   //get amounts
   const amounts = data.map((item) => item.amount);
@@ -51,10 +83,4 @@ function handleHover() {
 
 highlightCurrentDay();
 handleHover();
-
-fetch("../data.json")
-  .then((res) => res.json())
-  .then((data) => {
-    jsonData = data;
-    calculate(data);
-  });
+calculate(data);
